@@ -1,5 +1,6 @@
+
 import { defineConfig } from "cypress";
-import { createHero, deleteHero } from './cypress/support/data';
+import { createHero, deleteHero } from './dist-cypress/cypress/support/data.js';
 
 export default defineConfig({
   projectId: 'nd8nd1',
@@ -12,7 +13,6 @@ export default defineConfig({
       });
     },
   },
-
   component: {
     devServer: {
       framework: 'react',

@@ -1,0 +1,22 @@
+{
+  "userAdministrador":  {
+    "name": "Administrador",
+    "email": "admin@test.com",
+    "password": "test123",
+    "IsAdmin": true
+  },
+
+  "userRelesMortal":{
+    "name": "Reles Mortal",
+    "email": "test@test.com",
+    "password": "test123",
+    "IsAdmin": false
+  },
+
+  "InvalidUser":{
+    "name": "Usuário Desligado",
+    "email": "invalid@test.com",
+    "password": "invalid123",
+    "IsAdmin": false
+  }
+}
