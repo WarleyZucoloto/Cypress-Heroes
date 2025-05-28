@@ -5,27 +5,27 @@ class HeroesPage {
     }
 
     get heroesName () {
-        return cy.get ("data-cy='nameInput']")
+        return cy.get ("[data-cy='nameInput']")
     }
 
     get heroesPrice () {
-        return cy.get ("data-cy='priceInput']")
+        return cy.get ("[data-cy='priceInput']")
     }
 
     get heroesFans (){
-        return cy.get ("data-cy='fansInput']")
+        return cy.get ("[data-cy='fansInput']")
     }
 
     get heroesSaves () {
-        return cy.get ("data-cy='savesInput']")
+        return cy.get ("[data-cy='savesInput']")
     }
 
     get heroesPowers () {
-        return cy.get ("data-cy='powersSelect']")
+        return cy.get ("[data-cy='powersSelect']")
     }
 
     get heroesAvatar () {
-        return cy.get ("data-cy='avatarFile']")
+        return cy.get ("[data-cy='avatarFile']")
     }
     get buttonSubmit () {
         return cy.contains ('button', 'Submit').should('be.visible')

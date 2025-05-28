@@ -1,0 +1,16 @@
+{
+    "validHero": {
+        "name": "Captain Coverage",
+        "price":127,
+        "fans": 68,
+        "saves": 96,
+        "power": "Garante que nenhum cenário fique sem teste"
+    },
+    "anotherHero": {
+        "name": "LogMaster",
+        "price": 68,
+        "fans": 124,
+        "saves": 11,
+        "power": "Rastreia bugs pelos rastros dos logs"
+    }
+}

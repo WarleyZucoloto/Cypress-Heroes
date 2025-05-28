@@ -14,7 +14,7 @@ describe('Login Page Test', () => { // Teste de página de login
         LoginPage.buttonLogin.click()
     })
 
-    it ('Successful login with Administrator user', () => { // Login Bem-Sucedido com usuário Administrador
+    it ('Successful Login with admin user - the one who can create and edit hero roster', () => { // Login Bem-Sucedido com usuário administrador - aquele que pode criar e editar lista de herois
 
         loginVerify(DataUser.userAdministrador.email, DataUser.userAdministrador.password)
 
@@ -27,7 +27,7 @@ describe('Login Page Test', () => { // Teste de página de login
         })
     })
 
-    it ('Login Successful with user without admin access', () => { // Login Bem-sucedido com usuário sem acesso administrador
+    it ('Successful Login with user without administrator permission - one who CANNOT create and edit hero list', () => { // Login Bem-Sucedido com usuário sem permissão administrador - aquele que NÃO pode criar e editar lista de herois
 
         loginVerify(DataUser.userRelesMortal.email, DataUser.userRelesMortal.password)
 
