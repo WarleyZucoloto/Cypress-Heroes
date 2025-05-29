@@ -35,14 +35,18 @@ class HeroesPage {
         return cy.get ('.text-red-500')
     }
 
-    HeroFiedForm(name, price, fans, saves, power) {
+    HeroFiedForm(name, price, fans, saves) {
         if (name) this.heroesName.type(name)
         if (price) this.heroesPrice.type(price)
         if (fans) this.heroesFans.type(fans)
         if (saves) this.heroesSaves.type(saves)
-        if (power) this.heroesPowers.type(power)
     }
 
+    getAllPowerText() {
+        return this.heroesPowers.find('option').then($option => {
+            return Cypress.$.map($option, option => Cypress.$(option).text())
+        })
+    }
 }
 
 export default new HeroesPage ()
