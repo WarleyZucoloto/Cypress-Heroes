@@ -83,9 +83,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
     const longName = "teste".repeat(62)
     const heroDataInvalid = [
 
+        // Creating a nameless hero
         // Criando um heroi sem nome
-        //
         {
+            testName: 'Creating a nameless Hero',
             name: '',
             price: HeroData.validHero.price,
             fans: HeroData.validHero.fans,
@@ -94,9 +95,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Name is required'
         },
 
+        // Creating a priceless hero
         // Criando um heroi sem preço
-        //
         {
+            testName: 'Creating a priceless hero',
             name: HeroData.validHero.name,
             price: '',
             fans: HeroData.validHero.fans,
@@ -105,9 +107,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Price is required'
         },
 
+        // Creating a hero without fans
         // Criando um heroi sem fans
-        //
         {
+            testName: 'Creating a hero without fans',
             name: HeroData.validHero.name,
             price: HeroData.validHero.price,
             fans: '',
@@ -116,9 +119,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Fans is required'
         },
 
+        // Creating a hero without saves
         // Criando um heroi sem salvamentos
-        //
         {
+            testName: 'Creating a hero without saves',
             name: HeroData.validHero.name,
             price: HeroData.validHero.price,
             fans: HeroData.validHero.fans,
@@ -127,9 +131,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Saves is required'
         },
 
+        // Creating a hero without power
         // Criando um heroi sem 
-        //
         {
+            testName: 'Creating a hero without power',
             name: HeroData.validHero.name,
             price: HeroData.validHero.price,
             fans: HeroData.validHero.fans,
@@ -138,9 +143,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Powers is required'
         },
 
+        // Creating a hero with a very big name
         // Criando um heroi com nome muito grande 
-        //
         {
+            testName:'Creating a hero with a very big name',
             name: longName,
             price: HeroData.validHero.price,
             fans: HeroData.validHero.fans,
@@ -149,9 +155,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Name is too long'
         },
 
+        // Creating a hero by placing characters in the price field
         // Criando um heroi colocando caracteres no campo de preço 
-        //
         {
+            testName: 'Creating a hero by placing characters in the price field',
             name: HeroData.validHero.name,
             price: 'test',
             fans: HeroData.validHero.fans,
@@ -160,9 +167,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Price must be a number'
         },
 
+        // Creating a hero by placing characters in the fans field
         // Criando um heroi colocando caracteres no campo de fans
-        //
         {
+            testName: 'Creating a hero by placing characters in the fans field',
             name: HeroData.validHero.name,
             price: HeroData.validHero.price,
             fans: 'teste',
@@ -171,9 +179,10 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
             alertExpectedText: 'Fans must be a number'
         },
 
+        // Creating a hero by placing characters in the saver field
         // Criando um heroi colocando caracteres no campo de saves
-        //
         {
+            testName: 'Creating a hero by placing characters in the saver field',
             name: HeroData.validHero.name,
             price: HeroData.validHero.price,
             fans: HeroData.validHero.fans,
@@ -183,9 +192,9 @@ describe ('Hero Management Module', () => { // Módulo de Gerenciamento de Heró
         },
     ]
 
-    heroDataInvalid.forEach(({name, price, fans, saves, power, alertExpectedText, alertExpectedTexts}) => {
+    heroDataInvalid.forEach(({testName, name, price, fans, saves, power, alertExpectedText, alertExpectedTexts}) => {
 
-        const testTitle = `Failed Test : ${alertExpectedTexts},  ${alertExpectedText}`
+        const testTitle = `Failed Test : ${testName}`
 
         it (testTitle, () => {
             HomePage.buttonCreateNewHero.click()
