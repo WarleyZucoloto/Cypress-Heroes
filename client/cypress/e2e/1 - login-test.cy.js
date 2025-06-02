@@ -14,7 +14,7 @@ describe('Login Page Test', () => { // Teste de página de login
         LoginPage.buttonLogin.click()
     })
 
-    it ('Successful Login with admin user - the one who can create and edit hero roster', () => { // Login Bem-Sucedido com usuário administrador - aquele que pode criar e editar lista de herois
+    it ('Successful Login with admin user - the one who can can create and edit hero roster', () => { // Login Bem-Sucedido com usuário administrador - aquele que pode criar e editar lista de herois
 
         loginVerify(DataUser.userAdministrador.email, DataUser.userAdministrador.password)
 
@@ -23,7 +23,7 @@ describe('Login Page Test', () => { // Teste de página de login
 
         HomePage.cardHoroes.first().within(() => {
             HomePage.buttonEditHero.should('be.visible')
-            HomePage.buttonDeleteHero.should('be.visible')
+            HomePage.buttonDeleteHeroCard.should('be.visible')
         })
     })
 
@@ -35,7 +35,7 @@ describe('Login Page Test', () => { // Teste de página de login
 
         HomePage.cardHoroes.first().within(() => {
             HomePage.buttonEditHero.should('not.exist')
-            HomePage.buttonDeleteHero.should('not.exist')
+            HomePage.buttonDeleteHeroCard.should('not.exist')
         })
     })
     
@@ -116,7 +116,6 @@ describe('Login Page Test', () => { // Teste de página de login
             expectedAlerts: ['Invalid email or password'] // Ou uma mensagem mais específica para case sensitive, se houver
         },
 
-        
         // --- CENÁRIO DE VULNERABILIDADE (IGNORADO) ---
         // Este teste é ignorado porque todos os usuários de teste atualmente compartilham a mesma senha no ambiente de teste.
         // Não é possível validar cenários onde um usuário tenta logar com a senha de outro usuário.
@@ -133,27 +132,27 @@ describe('Login Page Test', () => { // Teste de página de login
             skipReason: 'This test is skipped because all test users currently share the same password in the test environment. It is not possible to validate scenarios where a user attempts to log in with a different user\'s password.'
          // skipReason: 'Este teste foi ignorado porque todos os usuários de teste atualmente compartilham a mesma senha no ambiente de teste. Não é possível validar cenários em que um usuário tenta fazer login com uma senha de usuário diferente.'   
         }
-    ];
+    ]
 
     invalidLoginScenarios.forEach(({ testName, email, password, expectedAlerts, skip, skipReason }) => {
         const testFunction = skip ? it.skip : it;
 
         testFunction(`Failed - ${testName}`, () => {
             if (skip) {
-                cy.log(`Test skipped: ${testName} - Reason: ${skipReason}`);
-                return;
+                cy.log(`Test skipped: ${testName} - Reason: ${skipReason}`)
+                return
             }
-            loginVerify(email, password);
+            loginVerify(email, password)
 
             if (expectedAlerts.length === 1) {
-                LoginPage.alertGeneric.should('be.visible').and('contain', expectedAlerts[0]);
+                LoginPage.alertGeneric.should('be.visible').and('contain', expectedAlerts[0])
             } 
             
             else if (expectedAlerts.length > 1) {
                 expectedAlerts.forEach((alertText, index) => {
-                    LoginPage.alertGeneric.eq(index).should('be.visible').and('contain', alertText);
-                });
+                    LoginPage.alertGeneric.eq(index).should('be.visible').and('contain', alertText)
+                })
             }
-        });
-    });
-});
+        })
+    })
+})

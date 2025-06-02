@@ -12,5 +12,14 @@
         "fans": 124,
         "saves": 11,
         "power": "Rastreia bugs pelos rastros dos logs"
+    },
+    
+    "heroDelete": {
+        "name": "Billy Bruttus",
+        "price": 1456,
+        "fans": 5,
+        "saves": 1,
+        "power": "Super Strength"
     }
 }
+
