@@ -36,3 +36,6 @@ videos
 
 # OS
 .DS_Store
+
+# Imagens
+./Pictures
