@@ -1,6 +1,6 @@
 # 🛡️ Cypress Hero Manager - Test Automation
 
-![Cypress Logo](../HeroesApp/Pictures/Cypres%20Heroes%20-%20img.png)
+![Hero Manager App Screenshot](../HeroesApp/Pictures/Cypres%20Heroes%20-%20img.png)
 
 ![Cypress Logo](https://img.shields.io/badge/Cypress-10.0.0-green?style=for-the-badge&logo=cypress&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript&logoColor=black)
