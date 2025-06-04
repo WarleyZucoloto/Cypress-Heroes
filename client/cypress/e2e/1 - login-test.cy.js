@@ -134,7 +134,7 @@ describe('Login Page Test', () => { // Teste de página de login
         }
     ]
 
-    invalidLoginScenarios.forEach(({ testName, email, password, expectedAlerts, skip, skipReason }) => {
+    invalidLoginScenarios.forEach(({ testName, email, password, expectedAlerts, skip, skipReason }) => { // Cenários de Login Invválidos
         const testFunction = skip ? it.skip : it;
 
         testFunction(`Failed - ${testName}`, () => {
