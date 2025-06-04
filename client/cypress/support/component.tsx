@@ -21,7 +21,7 @@ import '../../src/styles.scss';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-import { mount } from 'cypress/react18';
+import { mount } from 'cypress/react';
 import CyHerosProvider from '../../src/contexts/CyHeroesProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RouteObject, RouterProvider, createMemoryRouter } from 'react-router';
