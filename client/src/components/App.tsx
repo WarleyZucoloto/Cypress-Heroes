@@ -2,7 +2,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import HeroesListPage from '../pages/HeroesListPage';
-import CyHerosProvider from './CyHeroesProvider';
+import CyHerosProvider from '../../cypress/contexts/CyHeroesProvider';
 import HeroEditPage from '../pages/HeroEditPage';
 import HeroNewPage from '../pages/HeroNewPage';
 
