@@ -340,7 +340,7 @@ describe ('Hero manager modules - CRUD', () => { // Módulos de gerenciamento de
         })
     })
 
-    describe('Hero Deletion Functionality', () => {
+    describe('Hero Deletion Functionality', () => { // Funcionalidade de Deletar Herói
 
         beforeEach(() => {
 
