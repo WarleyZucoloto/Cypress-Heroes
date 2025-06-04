@@ -109,5 +109,5 @@ Este projeto está sob a licença MIT.
 ## 📞 Contato
 
 * **Nome:** Warley Zucoloto
-* **LinkedIn:** [https://www.linkedin.com/in/warley-zucoloto-a787201b1/](https://www.linkedin.com/in/warley-zucoloto-a787201b1/) *(Ajuste este link para o seu)*
+* **LinkedIn:** [https://www.linkedin.com/in/warley-zucoloto-a787201b1/](https://www.linkedin.com/in/warleydomingueszucoloto/)
 * **GitHub:** [https://github.com/WarleyZucoloto](https://github.com/WarleyZucoloto)
