@@ -10,8 +10,8 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives",
     "preview": "vite preview --host",
-    "test:e2e:ci": "npx cypress run --group e2e --parallel",
-    "test:ct:ci": "npx cypress run --component --group ct --parallel"
+    "test:e2e:ci": "npx cypress run",
+    "test:ct:ci": "npx cypress run --component"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.22.0",
