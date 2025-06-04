@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cypress install
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v3
         with:
           runTests: false
           build: npm run build
@@ -41,7 +41,7 @@ jobs:
         with:
           name: build-folders
       - name: Run E2E Tests
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v3
         with:
           start: npm run start:ci
           wait-on: 'http://localhost:3000, http://localhost:3001/heroes'
@@ -61,7 +61,7 @@ jobs:
         with:
           name: build-folders
       - name: Run CT Tests
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v3
         with:
           command: npm run test:ct:ci
   api-tests:
@@ -79,7 +79,7 @@ jobs:
         with:
           name: build-folders
       - name: Run API Tests
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v3
         with:
           start: npm run start:ci
           wait-on: 'http://localhost:3000, http://localhost:3001/heroes'

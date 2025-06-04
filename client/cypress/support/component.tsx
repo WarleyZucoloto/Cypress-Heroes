@@ -22,7 +22,7 @@ import '../../src/styles.scss';
 // require('./commands')
 
 import { mount } from 'cypress/react18';
-import CyHerosProvider from '../contexts/CyHeroesProvider';
+import CyHerosProvider from '../../src/components/CyHeroesProvider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RouteObject, RouterProvider, createMemoryRouter } from 'react-router';
 
