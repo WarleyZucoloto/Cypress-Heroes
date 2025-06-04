@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { CyHeroesContext } from '../components/CyHeroesProvider';
+import { CyHeroesContext } from '../contexts/CyHeroesProvider';
 
 export function useModal() {
   const context = useContext(CyHeroesContext);

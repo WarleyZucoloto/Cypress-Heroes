@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User } from '../models';
-import Modal from './Modal';
+import Modal from '../components/Modal';
 
 interface ModalContext {
   modal?: React.ReactNode;

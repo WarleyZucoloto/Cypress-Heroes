@@ -1,5 +1,5 @@
 import { useCallback, useContext, useEffect, useState } from 'react';
-import { CyHeroesContext } from '../components/CyHeroesProvider';
+import { CyHeroesContext } from '../contexts/CyHeroesProvider';
 import { User } from '../models';
 import { API_URL } from '../utils/constants';
 
