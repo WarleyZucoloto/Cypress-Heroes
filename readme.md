@@ -115,3 +115,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull r
 ## 📄 Licença
 
 Este projeto está sob a licença MIT.
+
+## 📞 Contato
+
+* **Nome:** Warley Zucoloto
+* **LinkedIn:** [https://www.linkedin.com/in/warleydomingueszucoloto](https://www.linkedin.com/in/warleydomingueszucoloto/)
+* **GitHub:** [https://github.com/WarleyZucoloto](https://github.com/WarleyZucoloto)
